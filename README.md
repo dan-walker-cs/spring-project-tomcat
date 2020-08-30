@@ -27,6 +27,7 @@ Next Steps:
 - Build more robust html templates for a more professional look
 - Mess around with CSS to stylize webpages with a more professional look and feel
 - Add an error page redirect with useful messages about exceptions
+- Write and automate testing for the application
 - Select an API with which to add interesting functionality and expand the DB schema
 
     Ideas:
