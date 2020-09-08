@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-"# spring-fullstack" 
-=======
-# spring-fullstack
+
 THIS PROJECT IS CURRENTLY IN PROGRESS.
 
 This project is a full-stack SpringBoot application. Currently, it is a simple user account registration application.
@@ -37,4 +34,3 @@ Next Steps:
       - IMDB API - collect previously seen films by each user
                  - use data such as genre, cast, etc. to recommend similar titles
       - 
->>>>>>> refs/remotes/origin/master
