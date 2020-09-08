@@ -40,10 +40,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .antMatchers("/user").hasAnyRole("USER", "ADMIN")
-                .antMatchers("/","/register","/login").permitAll()
+                .antMatchers("/","/home","/register","/login").permitAll()
                 .and().formLogin()
                 .and().logout()
-                .logoutSuccessUrl("/");
+                .logoutSuccessUrl("/home");
 
         // Default successful login URL
         http.formLogin()

@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Account Registration</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/home" th:href="@{/home}">Home</a>
+                </li>
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <h1>This is the account registration page</h1>
 
-    <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+    <form action="#" th:action="@{/register}" th:object="${user}" method="post"/>
     <table>
         <tr>
             <td>username:</td>

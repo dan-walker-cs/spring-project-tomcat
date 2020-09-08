@@ -33,6 +33,6 @@ public class RegisterController {
         user.setRoles("ROLE_USER");
         // add new user to DB
         userRepository.save(user);
-        return "redirect:/";
+        return "redirect:/home";
     }
 }

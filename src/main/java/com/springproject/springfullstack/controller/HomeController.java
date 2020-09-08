@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 
     // Redirects the default URL to the home page URL
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String homePage(Model model) {
         return "home";
     }
