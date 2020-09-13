@@ -3,6 +3,7 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Home Page</title>
 </head>
 <body>
@@ -23,12 +24,15 @@
                 </li>
             </ul>
         </nav>
+        <h1>Spring Project</h1>
     </header>
-    <h1>Welcome to my <em>work-in-progress</em>, with Spring!</h1>
+    <section>
+        <h2>Welcome to my <em>work-in-progress</em>, with Spring!</h2>
 
-    <button onclick="location.href='/login'" type="button">
-        Login</button>
-    <button onclick="location.href='/register'" type="button">
-        Register</button>
+        <button onclick="location.href='/login'" type="button">
+            Login</button>
+        <button onclick="location.href='/register'" type="button">
+            Register</button>
+    </section>
 </body>
 </html>

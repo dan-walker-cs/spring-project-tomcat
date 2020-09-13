@@ -1,0 +1,27 @@
+body {
+    font-family: helvetica, arial;
+}
+
+header {
+    background: black;
+    color: white;
+}
+
+h1 {
+
+}
+
+nav {
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}

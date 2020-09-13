@@ -3,10 +3,10 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <title>Data Overview</title>
 </head>
 <body>
-
     <header>
         <nav>
             <ul>
@@ -18,12 +18,13 @@
                 </li>
             </ul>
         </nav>
+        <h1>Spring Project</h1>
     </header>
+    <section>
+        <h2>This is the current system state</h2><br/>
 
-    <h1>This is the current system state</h1><br/>
-
-    <table border = "1" cellpadding = "10">
-        <thead>
+        <table border = "1" cellpadding = "10">
+            <thead>
             <tr>
                 <td>user_id</td>
                 <td>username</td>
@@ -31,8 +32,8 @@
                 <td>active</td>
                 <td>roles</td>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <tr th:each="user : ${allUsers}">
                 <td th:text="${user.id}">user_id</td>
                 <td th:text="${user.username}">username</td>
@@ -40,10 +41,11 @@
                 <td th:text="${user.active}">isActive</td>
                 <td th:text="${user.roles}">roles</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
-    <button onclick="location.href='/logout'" type="button">
-        Logout</button>
+        <button onclick="location.href='/logout'" type="button">
+            Logout</button>
+    </section>
 </body>
 </html>
