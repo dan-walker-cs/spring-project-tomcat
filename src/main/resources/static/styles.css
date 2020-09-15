@@ -7,8 +7,12 @@ header.project-header {
     color: white;
 }
 
-h1 {
+header.project-header a {
+    color: white;
+}
 
+header h1 {
+    padding: 10px;
 }
 
 nav.account-nav {
@@ -17,11 +21,19 @@ nav.account-nav {
 
 nav.account-nav ul {
     margin: 0;
-    padding: 0;
+    padding: 2px;
     list-style-type: none;
 }
 
 nav.account-nav ul li {
     display: inline-block;
     margin-right: 20px;
+}
+
+section {
+
+}
+
+section div {
+
 }
