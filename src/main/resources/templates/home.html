@@ -13,9 +13,11 @@
                 <li>
                     <a href="/home" th:href="@{/home}">Home</a>
                 </li>
+                <li>|</li>
                 <li sec:authorize="!isAuthenticated()" class="nav-item">
                     <a href="/register" th:href="@{/register}">Register</a>
                 </li>
+                <li>|</li>
                 <li sec:authorize="!isAuthenticated()" class="nav-item">
                     <a href="/login">Login</a>
                 </li>
@@ -38,5 +40,12 @@
                 Register</button>
         </div>
     </section>
+    <hr>
+    <hr>
+    <footer>
+        <p>Author: dan-walker-CS</p>
+        <p>Github: <a href="https://github.com/dan-walker-cs/spring-project">project_link</a></p>
+        <p class = "secret-message">I love Nanz!</p>
+    </footer>
 </body>
 </html>
