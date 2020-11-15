@@ -1,6 +1,4 @@
-![](https://github.com/dan-walker-cs/spring-project/tree/master/src/main/resources/static/img/home_page_preview.png)
-
-THIS PROJECT IS CURRENTLY IN PROGRESS.
+THIS PROJECT IS CURRENTLY IN PROGRESS. -- https://github.com/dan-walker-cs/spring-project/tree/master/src/main/resources/static/img for images of web pages
 
 This project is a full-stack SpringBoot application. Currently, it is a simple user account registration application.
 
