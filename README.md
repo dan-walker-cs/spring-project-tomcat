@@ -1,7 +1,5 @@
-![](/main/resources/img/home_page_preview.png)
-![](/main/resources/img/register preview.png)
-![](/main/resources/img/admin_preview.png)
-![](/main/resources/img/current_schema.png)
+![](https://github.com/dan-walker-cs/spring-project/tree/master/src/main/resources/static/img/home_page_preview.png)
+
 THIS PROJECT IS CURRENTLY IN PROGRESS.
 
 This project is a full-stack SpringBoot application. Currently, it is a simple user account registration application.
