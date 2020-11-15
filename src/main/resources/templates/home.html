@@ -3,49 +3,31 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/resources/static/styles.css">
+    <title>Home</title>
 </head>
-<body>
-    <header class = "project-header">
-        <nav class = "account-nav">
-            <ul>
-                <li>
-                    <a href="/home" th:href="@{/home}">Home</a>
-                </li>
-                <li>|</li>
-                <li sec:authorize="!isAuthenticated()" class="nav-item">
-                    <a href="/register" th:href="@{/register}">Register</a>
-                </li>
-                <li>|</li>
-                <li sec:authorize="!isAuthenticated()" class="nav-item">
-                    <a href="/login">Login</a>
-                </li>
-                <li sec:authorize="isAuthenticated()" class="nav-item">
-                    <a href="/logout">Logout</a>
-                </li>
-            </ul>
-        </nav>
-        <h1>Spring Project</h1>
-    </header>
-    <section>
-        <h2>Welcome to my <em>work-in-progress</em>, with Spring!</h2>
-
-        <div>
-            <button onclick="location.href='/login'" type="button">
-                Login</button>
-        </div>
-        <div>
-            <button onclick="location.href='/register'" type="button">
-                Register</button>
-        </div>
-    </section>
-    <hr>
-    <hr>
-    <footer>
-        <p>Author: dan-walker-CS</p>
-        <p>Github: <a href="https://github.com/dan-walker-cs/spring-project">project_link</a></p>
-        <p class = "secret-message">I love Nanz!</p>
-    </footer>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div th:replace="~{fragments/navigation :: navigation}"></div>
+        <main role="main" class="inner-cover">
+            <h1 class="cover-heading pt-3">Welcome to SpringBoot Registration</h1>
+            <p class="lead pt-3">This is a simple user registration application, complete with login authorization.
+                Powered by SpringBoot (web,mvc,security,thymeleaf,SpringDataJPA).</p>
+            <p class="lead pt-5">
+                <a href="/register" class="btn btn-lg btn-primary">Register</a>
+                <a href="/login" class="btn btn-lg btn-primary">Login</a>
+            </p>
+        </main>
+    </div>
+    <div class="container fixed-bottom">
+        <hr>
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
 </body>
 </html>

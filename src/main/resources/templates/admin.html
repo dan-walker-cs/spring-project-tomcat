@@ -3,27 +3,44 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Data Overview</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/resources/static/styles.css">
+    <title>Dashboard</title>
 </head>
-<body>
+<body class="text-center">
     <header class = "project-header">
-        <nav class = "account-nav">
-            <ul>
-                <li>
-                    <a href="/home" th:href="@{/home}">Home</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="/logout">Logout</a>
-                </li>
-            </ul>
-        </nav>
-        <h1>Spring Project</h1>
+        <div th:replace="~{fragments/navigation :: navigation}"></div>
+        <h1 class="mt-5">Administrator Dashboard</h1>
     </header>
     <section>
-        <h2>This is the current system state</h2><br/>
+        <h3 class="mt-5">This is the current system state</h3><br/>
 
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">user_id</th>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
+                <th scope="col">active</th>
+                <th scope="col">roles</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${allUsers}">
+                <td th:text="${user.id}">user_id</td>
+                <td th:text="${user.username}">username</td>
+                <td th:text="${user.password}">password</td>
+                <td th:text="${user.active}">isActive</td>
+                <td th:text="${user.roles}">roles</td>
+            </tr>
+            </tbody>
+        </table>
+        <!--
         <table border = "1" cellpadding = "10">
             <thead>
             <tr>
@@ -44,13 +61,12 @@
             </tr>
             </tbody>
         </table>
+        -->
     </section>
-    <hr>
-    <hr>
-    <footer>
-        <p>Author: dan-walker-CS</p>
-        <p>Github: <a href="https://github.com/dan-walker-cs/spring-project">project_link</a></p>
-        <p class = "secret-message">I love Nanz!</p>
-    </footer>
+
+    <div class="container fixed-bottom">
+        <hr>
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
 </body>
 </html>

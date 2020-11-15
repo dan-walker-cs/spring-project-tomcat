@@ -3,36 +3,29 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/resources/static/styles.css">
     <title>Account</title>
 </head>
-<body>
+<body class="text-center">
     <header class = "project-header">
-        <nav class = "account-nav">
-            <ul>
-                <li>
-                    <a href="/home" th:href="@{/home}">Home</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="/logout">Logout</a>
-                </li>
-            </ul>
-        </nav>
-        <h1>Spring Project</h1>
+        <div th:replace="~{fragments/navigation :: navigation}"></div>
+        <h1 class="mt-5">Account Information</h1>
     </header>
     <section>
-        <h2>Welcome, <span th:text="${user}"></span>!</h2>
+        <h3 class="mt-5">Welcome, <span th:text="${user}"></span>!</h3>
 
-        <button onclick="location.href='/logout'" type="button">
-            Logout</button>
+        <a href="/logout" class="btn btn-lg btn-primary mt-5">Logout</a>
     </section>
-    <hr>
-    <hr>
-    <footer>
-        <p>Author: dan-walker-CS</p>
-        <p>Github: <a href="https://github.com/dan-walker-cs/spring-project">project_link</a></p>
-        <p class = "secret-message">I love Nanz!</p>
-    </footer>
+
+    <div class="container fixed-bottom">
+        <hr>
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
 </body>
 </html>
