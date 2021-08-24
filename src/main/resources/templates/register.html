@@ -29,7 +29,7 @@
                 <label class="mr-2" for="exampleInputPassword1">Password: </label>
                 <input type="password" class="form-control" id="exampleInputPassword1" th:field="*{password}"/>
             </div>
-            <button type="submit" href="/home" class="btn btn-lg btn-primary mb-2">Create Account</button>
+            <button type="submit" th:href="@{/home}" class="btn btn-lg btn-primary mb-2">Create Account</button>
         </form>
     </div>
 

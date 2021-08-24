@@ -31,6 +31,7 @@ public class RegisterController {
         // default data
         user.setActive(true);
         user.setRoles("ROLE_USER");
+        user.setId(userRepository.count());
         // add new user to DB
         userRepository.save(user);
         return "redirect:/home";

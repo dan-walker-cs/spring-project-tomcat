@@ -18,7 +18,6 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-
     // Displays the user.html template
     @RequestMapping("/user")
     public String userPage(ModelMap model, final HttpServletRequest request, Principal principal) {

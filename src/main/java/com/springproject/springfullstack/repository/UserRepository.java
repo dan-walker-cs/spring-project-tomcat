@@ -1,11 +1,10 @@
 package com.springproject.springfullstack.repository;
 
 import com.springproject.springfullstack.model.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-// This class provides the use of JpaRepository class functions and specifies the relationship.
-public interface UserRepository extends JpaRepository<User,Integer> {
+public interface UserRepository extends CrudRepository<User, Integer> {
     Optional<User> findByUsername(String username);
 }

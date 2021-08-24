@@ -1,0 +1,4 @@
+- added dependencies to pom.xml
+- changed application entrypoint to mimic STABLE_JMX-app
+STABLE
+- changed hrefs to th:hrefs

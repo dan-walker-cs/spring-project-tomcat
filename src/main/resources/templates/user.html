@@ -20,7 +20,7 @@
     <section>
         <h3 class="mt-5">Welcome, <span th:text="${user}"></span>!</h3>
 
-        <a href="/logout" class="btn btn-lg btn-primary mt-5">Logout</a>
+        <a th:href="@{/logout}" class="btn btn-lg btn-primary mt-5">Logout</a>
     </section>
 
     <div class="container fixed-bottom">
